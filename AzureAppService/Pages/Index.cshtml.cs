@@ -10,11 +10,10 @@ namespace AzureAppService.Pages
 {
     public class IndexModel : PageModel
     {
-        IConfiguration config;
         public string Environment { get; set; }
         public IndexModel(IConfiguration config)
         {
-            Environment = config["ASPNETCORE_ENVIRONMENT"];
+            Environment = config["myval"];
         }
 
         public void OnGet()
